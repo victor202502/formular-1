@@ -8,48 +8,40 @@
 </head>
 <body>
     <header>
-        <img src="hotel.jpg" alt="Hotelbild" width="100%">
-        <h1>Reservierungsformular</h1>
+        <img src="img/hotel.jpg" alt="Hotelbild" width="50%" style="display: inline-block;">
+        <h1 style="display: inline-block; vertical-align: top; margin-left: 20px;">Willkommen in Sonnenschein</h1>
     </header>
 
+    <p style="font-size: 14px;">Informieren Sie sich über neue Angebote zur Eröffnung des Neubaus.</p>
+
     <form action="/submit" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="client-number">Kundennummer:</label>
-        <input type="number" id="client-number" name="client-number" required><br><br>
-
-        <label for="equipment">Zimmerausstattung:</label>
+        <label for="equipment">Zimmerausrüstung:</label>
         <select id="equipment" name="equipment">
             <option value="einfach">Einfach</option>
             <option value="komplett">Komplett</option>
             <option value="luxus">Luxus</option>
         </select><br><br>
 
-        <label>Reservierungssaison:</label><br>
-        <input type="radio" id="niedrig" name="season" value="niedrig" required>
-        <label for="niedrig">Niedrig (Frühsommer)</label><br>
+        <label>Buchungszeit:</label><br>
+        <input type="radio" id="vorsaison" name="season" value="vorsaison" required>
+        <label for="vorsaison">Vorsaison</label><br>
 
-        <input type="radio" id="mittel" name="season" value="mittel">
-        <label for="mittel">Mittel (Hochsommer)</label><br>
+        <input type="radio" id="hauptsaison" name="season" value="hauptsaison">
+        <label for="hauptsaison">Hauptsaison</label><br>
 
-        <input type="radio" id="hoch" name="season" value="hoch">
-        <label for="hoch">Hoch (Spätsommer)</label><br><br>
+        <input type="radio" id="nachsaison" name="season" value="nachsaison">
+        <label for="nachsaison">Nachsaison</label><br><br>
 
-        <label for="message">Nachricht:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <label for="days">Buchungstage:</label>
+        <input type="number" id="days" name="days" required><br><br>
 
         <input type="submit" value="Absenden">
         <input type="reset" value="Alles löschen">
     </form>
 
     <footer>
-        <h2>Anreise</h2>
-        <a href="anreise-auto.html">Anreise mit dem Auto</a> |
-        <a href="oeffentliche-verkehrsmittel.html">Öffentliche Verkehrsmittel</a>
+        <a href="anreise-auto.html">Anreise mit dem Auto</a> - <a href="https://www.map24.com">Map24</a> |
+        <a href="oeffentliche-verkehrsmittel.html">Öffentliche Verkehrsmittel</a> - <a href="https://www.bahn.de">Bahnauskunft</a>
     </footer>
 </body>
 </html>
