@@ -1,23 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formular 1</title>
+    <title>Reservierungsformular</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Formular 1</h1>
+    <header>
+        <img src="hotel.jpg" alt="Hotelbild" width="100%">
+        <h1>Reservierungsformular</h1>
+    </header>
+
     <form action="/submit" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
         
-        <label for="email">Email:</label>
+        <label for="email">E-Mail:</label>
         <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="message">Message:</label><br>
+
+        <label for="client-number">Kundennummer:</label>
+        <input type="number" id="client-number" name="client-number" required><br><br>
+
+        <label for="equipment">Zimmerausstattung:</label>
+        <select id="equipment" name="equipment">
+            <option value="einfach">Einfach</option>
+            <option value="komplett">Komplett</option>
+            <option value="luxus">Luxus</option>
+        </select><br><br>
+
+        <label>Reservierungssaison:</label><br>
+        <input type="radio" id="niedrig" name="season" value="niedrig" required>
+        <label for="niedrig">Niedrig (Frühsommer)</label><br>
+
+        <input type="radio" id="mittel" name="season" value="mittel">
+        <label for="mittel">Mittel (Hochsommer)</label><br>
+
+        <input type="radio" id="hoch" name="season" value="hoch">
+        <label for="hoch">Hoch (Spätsommer)</label><br><br>
+
+        <label for="message">Nachricht:</label><br>
         <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-        
-        <input type="submit" value="Submit">
+
+        <input type="submit" value="Absenden">
+        <input type="reset" value="Alles löschen">
     </form>
+
+    <footer>
+        <h2>Anreise</h2>
+        <a href="anreise-auto.html">Anreise mit dem Auto</a> |
+        <a href="oeffentliche-verkehrsmittel.html">Öffentliche Verkehrsmittel</a>
+    </footer>
 </body>
 </html>
